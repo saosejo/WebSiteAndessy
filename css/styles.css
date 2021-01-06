@@ -10410,12 +10410,12 @@ header.masthead .masthead-heading {
   }
 }
 .team-member {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 .team-member img {
-  width: 14rem;
-  height: 14rem;
+  width: 10rem;
+  height: 10rem;
   border: 0.5rem solid rgba(0, 0, 0, 0.1);
 }
 .team-member h4 {
