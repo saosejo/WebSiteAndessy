@@ -21,6 +21,8 @@ $email_subject = "Website Contact Form:  $name";
 $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
 $headers = "From: rpasku2020@gmail.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";   
+console.log($headers,$email_body ,$to , $email_subject) 
 mail($to,$email_subject,$email_body,$headers);
+console.log("send")
 return true;         
 ?>
