@@ -22,11 +22,11 @@ $(function () {
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             
             Email.send({
-            SecureToken: "f8e43f2c-e5dc-4dbf-81de-383d6e0054a3",
-            To : 'yulieth.diaz@andessy.com',
+            SecureToken: "f6468787-b8d3-4669-9756-e25dfb096154",
+            To : 'contacto@andessy.com',
             From : email,
             Subject :  "Andessy Website Contact Form: " + name,
-            Body : "<html><h2>Información</h2><strong>"+message+"</strong></html>"
+            Body : "<html><h2>Información</h2><strong>Mensaje: </strong>"+message+"<br></br><strong> Número de contacto: </strong> "+phone+"</html>"
             }).then(
                  message => showAlert(message)
             );
@@ -51,7 +51,7 @@ $("#name").focus(function () {
 
 
 function showAlert(message) {
-    if (message = "OK") {
+    if (message == "OK") {
 
          // Success message
         $("#success").html("<div class='alert alert-success'>");
@@ -64,6 +64,9 @@ function showAlert(message) {
         $("#success > .alert-success").append("</div>");
         //clear all fields
         $("#contactForm").trigger("reset");
+        $this = $("#sendMessageButton");
+        $this.prop("disabled", false); // Disable submit button until AJAX call is complete to prevent duplicate messages
+            
     }else{
 
         //Fail message
